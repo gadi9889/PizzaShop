@@ -1,11 +1,23 @@
 .container {
-  padding: 0 2rem;
+  padding: 5vh 2rem;
   margin: auto;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 .order_box {
   border-radius: 10px;
   box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3);
   padding: 3vh;
+}
+
+#main_title {
+  background-image: url("../public/images/backgroundTitle.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 5vh;
 }

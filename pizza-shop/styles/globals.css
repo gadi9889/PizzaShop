@@ -12,6 +12,7 @@ html {
   display: flex;
   justify-content: center;
   background-color: rgb(241 245 249);
+  overflow-x: hidden;
 }
 
 a {
