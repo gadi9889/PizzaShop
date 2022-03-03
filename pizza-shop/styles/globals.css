@@ -13,6 +13,9 @@ html {
   justify-content: center;
   background-color: rgb(241 245 249);
   overflow-x: hidden;
+  background-image: url("../public/images/BackgroundOrder.jpg");
+  background-repeat: repeat;
+  background-size: 50vh;
 }
 
 a {
