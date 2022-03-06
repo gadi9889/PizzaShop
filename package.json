@@ -1,0 +1,26 @@
+{
+  "name": "pizzashop",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cd pizza-shop && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gadi9889/PizzaShop.git"
+  },
+  "author": "Gad Abo Rabia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gadi9889/PizzaShop/issues"
+  },
+  "homepage": "https://github.com/gadi9889/PizzaShop#readme",
+  "dependencies": {
+    "next-connect": "^0.12.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-plugin-react": "^7.29.3"
+  }
+}

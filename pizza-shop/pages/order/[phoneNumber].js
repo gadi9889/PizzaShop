@@ -20,7 +20,7 @@ export default function PhoneNumber() {
   const saveOrder = async () => {
     let tel = sessionStorage.getItem("tel");
     let order = productBarArr.toString();
-    const res = await fetch("/api/customer", {
+    await fetch("/api/customer", {
       body: JSON.stringify({ tel, order }),
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,6 @@ export default function PhoneNumber() {
       method: "POST",
     });
 
-    const result = await res.json();
     router.push(`/order/${tel}/details`);
   };
   return (

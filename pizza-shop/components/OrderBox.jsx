@@ -4,12 +4,22 @@ import { useRouter } from "next/router";
 export default function OrderBox() {
   const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     const form = e.currentTarget;
     e.preventDefault();
     e.stopPropagation();
     sessionStorage.setItem("tel", form["tel"].value);
-    router.push(`/order/${form["tel"].value}`);
+    let tel = form["tel"].value;
+    await fetch("/api/orderDetails", {
+      body: JSON.stringify({ tel }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    }).then((res) => {
+      if (res.status == 404) router.push(`/order/${tel}`);
+      else router.push(`/order/${tel}/details`);
+    });
   };
 
   return (
